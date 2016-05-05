@@ -1,0 +1,8 @@
+int main(){
+int a,b,r = 0;
+cin >> a >> b;
+	for(int i=0;i<b;i++){
+	r+=a;
+	}
+cout << a << " * " << b << " = " << r << endl;
+}
