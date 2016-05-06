@@ -1,8 +1,42 @@
-int main(){
-int a,b,r = 0;
-cin >> a >> b;
-	for(int i=0;i<b;i++){
-	r+=a;
-	}
-cout << a << " * " << b << " = " << r << endl;
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b,r = 0;
+		//Dado dos numeros multiplicarlo por sumas sucesivas
+		cin >> a >> b;
+		cout << a << " * " << b << " = ";
+			if((a == 0) or  (b == 0))
+			{
+				cout << " 0 ";
+			}
+			else if ((a < 0) ^ (b < 0))
+			{
+				//-2 * 3
+				if(a<0)
+					a+=(-(a)-(a));
+				else
+					b+=(-b+(-b));
+				for(int i=b;i>0;i--)
+					r-=a;
+			}
+			else if ( a > 0 and a > 0)
+			{
+				//2 * 3
+				for(int i=b;i>0;i--)
+					r+=a;
+			}
+			else
+			{
+				//-2 * -2
+				a+=(-a+(-a));
+				b+=(-b+(-b));
+				for(int i=b;i>0;i--)
+					r+=a;
+			}
+
+		 cout <<  r << endl;
+		 //return 0;
 }
